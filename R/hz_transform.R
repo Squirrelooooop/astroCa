@@ -9,7 +9,7 @@
 
 
 hz_transform <- function(df) {
-  tran_lm <- boxcox(Hz ~ 1, lambda = seq(-2, 2, 0.1), plotit = FALSE)
+  tran_lm <- boxcox(df$Hz ~ 1, lambda = seq(-2, 2, 0.1), plotit = FALSE)
   lambda <- tran_lm$x[which.max(tran_lm$y)]
   if (abs(lambda) < 1e-6) {
     df$hz_trans <- log(df$Hz)
