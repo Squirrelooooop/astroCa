@@ -1,7 +1,7 @@
 #' If Hz histogram is not normal, this use Boxcox transformation
 #' @param hz_model tidy_df
 #' @param df tidy_df
-#' @importFrom fBasics boxcox
+#' @importFrom MASS boxcox
 #' @return df with transformed Hz column
 #' @export
 

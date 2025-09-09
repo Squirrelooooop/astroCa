@@ -2,10 +2,10 @@
 
 export(hz_transform)
 export(tidydata)
+importFrom(MASS,boxcox)
 importFrom(dplyr,group_by)
 importFrom(dplyr,if_else)
 importFrom(dplyr,mutate)
 importFrom(dplyr,summarise)
-importFrom(fBasics,boxcox)
 importFrom(tidyr,drop_na)
 importFrom(tidyr,pivot_longer)
