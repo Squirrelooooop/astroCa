@@ -8,7 +8,7 @@
 
 
 hz_transform <- function(df) {
-  hz_model <- lm(Hz ~ treatment * ultrasound, data = ready)
+  hz_model <- lm(Hz ~ treatment * ultrasound, data = df)
   c <- abs(min(hz_model$residuals)) + 1
   residuals_p <- hz_model$residuals + c
   tran_lm <- fBasic::boxcox(residuals_p ~ 1, lambda = seq(-2, 2, 0.1), plotit = FALSE)
