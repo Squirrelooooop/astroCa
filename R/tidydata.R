@@ -16,12 +16,11 @@ tidydata <- function(df, timeinsec) {
       mean_cadff = mean(dFF),
       number_active = n(),
       .groups = "drop"
-    ) |>
-    tidyr::mutate(
+    ) |> dplyr::mutate(
       Hz = number_active / timeinsec,
-      mean_cadff = tidyr::if_else(mean_cadff == -9, 0, mean_cadff),
-      number_active = tidyr::if_else(mean_cadff == 0, 0L, number_active),
-      Hz = tidyr::if_else(mean_cadff == 0, 0, Hz)
+      mean_cadff = dplyr::if_else(mean_cadff == -9, 0, mean_cadff),
+      number_active = dplyr::if_else(mean_cadff == 0, 0L, number_active),
+      Hz = dplyr::if_else(mean_cadff == 0, 0, Hz)
     )
   tidy_df <- tidy_df[,-5]
   return(tidy_df)
