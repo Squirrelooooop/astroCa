@@ -26,5 +26,6 @@ tidydata <- function(df, timeinsec) {
       number_active = if_else(mean_cadff == 0, 0, number_active),
       Hz = if_else(mean_cadff == 0, 0, Hz)
     )
+  tidy_df$coverslip_id <- paste0(tidy_df$exp, "_", tidy_df$coverslip)
   return(tidy_df)
 }
