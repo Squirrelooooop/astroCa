@@ -3,6 +3,7 @@
 #' @param df Dataframe used to fit the model
 #' @import emmeans
 #' @import ggplot2
+#' @importFrom ggpubr theme_pubr
 #' @return plot with x axis as recording or ultrasound, y axis as response variable
 #' @export
 
