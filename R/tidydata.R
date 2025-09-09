@@ -4,7 +4,7 @@
 #' @importFrom dplyr group_by summarise mutate if_else
 #' @importFrom tidyr pivot_longer drop_na
 #' @return with cols for exp, coverslip, ultrasound, treatment, dFF
-
+#' @export
 
 tidydata <- function(df, timeinsec) {
   df[,5][is.na(df[,5])] <- -9
