@@ -23,7 +23,7 @@ tidydata <- function(df, timeinsec) {
     mutate(
       Hz = number_active / timeinsec,
       mean_cadff = if_else(mean_cadff == -9, 0, mean_cadff),
-      number_active = if_else(mean_cadff == 0, 0L, number_active),
+      number_active = if_else(mean_cadff == 0, 0, number_active),
       Hz = if_else(mean_cadff == 0, 0, Hz)
     )
   tidy_df <- tidy_df[,-5]
