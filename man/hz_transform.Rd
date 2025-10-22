@@ -4,12 +4,12 @@
 \alias{hz_transform}
 \title{If Hz histogram is not normal, this use Boxcox transformation}
 \usage{
-hz_transform(df)
+hz_transform(df, col_name)
 }
 \arguments{
 \item{df}{tidy_df}
 
-\item{hz_model}{tidy_df}
+\item{col_name}{name of column to transform}
 }
 \value{
 df with transformed Hz column
